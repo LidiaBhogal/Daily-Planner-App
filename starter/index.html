@@ -11,36 +11,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
-  <style>
-    #feedback {
-      font-size: 1.4em;
-    }
-
-    #selectable .ui-selecting {
-      background: #FECA40;
-    }
-
-    #selectable .ui-selected {
-      background: #F39814;
-      color: white;
-    }
-
-    #selectable {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 60%;
-    }
-
-    #selectable li {
-      margin: 3px;
-      padding: 0.4em;
-      font-size: 1.4em;
-      height: 18px;
-    }
-  </style>
-
-
+  
   <title>Work Day Scheduler</title>
 </head>
 
@@ -49,53 +20,54 @@
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
-    <div class="container">
+    <div class="time"></div>
+    
   </header>
-  <div class="container">
+  <div class="container" id="planner">
     <!-- Timeblocks go here -->
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">9AM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">10AM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">11AM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">12PM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">1PM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">2PM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">3PM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">4PM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
     <div class=" time-block row">
-      <div class="hour col-2">9am</div>
-      <textarea class="description col-8">timeblock</textarea>
+      <div class="hour col-2">5PM</div>
+      <textarea class="description col-8"></textarea>
       <button class="saveBtn col-2" type="button"><i class="fas fa-save"></i></button>
     </div>
   </div>
