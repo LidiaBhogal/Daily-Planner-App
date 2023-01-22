@@ -22,28 +22,31 @@ $(document).ready(function () {
     let addedPlannerInfo = $('textarea');
     let textAdded = inputedData.val();
     addedPlannerInfo.text(textAdded)
-planner.append(addedPlannerInfo)
-$(inputedData.va(''))
-saveButton.on('submit', savePlannerInfo)
+    planner.append(addedPlannerInfo)
+    $(inputedData.val(''))
+    saveButton.on('fas fa-save', savePlannerInfo)
 
+    localStorage.setItem(addedPlannerInfo,textAdded);
   }
 
   // write an if statement so the the block highlights in the correct colour
  
 
-  function colours(timeBlock){
-    if ( timeBlock < time){
-      let beforeTime = $('.description col-8').css('background-color', '#d3d3d3',)
-    } else if (timeBlock === time){
-      let presentTime = $('.description col-8').css('background-color', 'ff6961',)
+  $('.description col-8').focus(function(){
+    if ( beforeTime < time){
+      let beforeTime = $('this').css('background-color', '#d3d3d3')
+    } else if (presentTime === time){
+      let presentTime = $('this').css('background-color', 'ff6961')
   
-  } else {( timeBlock > time)
-    let futureTime = $('.description col-8').css('background-color', '#77dd77',)
+  } else {( futureTime > time)
+    let futureTime = $('this').css('background-color', '#77dd77',)
     }
     }
-  })
+)})
 
   // save to localStorage
+  
+  // localStorage.setItem(addedPlannerInfo,textAdded);
 
   // make sure things are saved once page is refreshed
 
