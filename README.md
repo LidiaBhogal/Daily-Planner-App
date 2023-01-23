@@ -38,3 +38,5 @@ https://lidiabhogal.github.io/Daily-Planner-App/
 N/A
 
 ## Credits
+
+N/A
