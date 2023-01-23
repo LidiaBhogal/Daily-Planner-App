@@ -12,27 +12,47 @@ $(document).ready(function () {
    
   })
 
+console.log($(".description"))
+
 // save what user enters in text area
-  let inputedData =$('.description col-8')
+  let inputedData =$('.description')
   let planner =$('#planner')
-  let saveButton = $('.saveBtn col-2')
+  let saveButton = $('.saveBtn')
+
+  for (let i = 0; i < inputedData.length; i++) {
+    inputedData[i].value = localStorage.getItem(`hour${i}`);
+     if (time.format("h") <= (i+9) ) {
+      inputedData[i].classList.add('past')
+     } else if (time.format('h') === (i+9)){
+      inputedData[i].classList.add('present')
+     } else (time.format('h') >= (i+9)){
+      inputedData[i].classList.add('future')
+     }
+  }
+}
 
   function savePlannerInfo(event) {
     event.preventDefault();
+    console.log(event)
     let addedPlannerInfo = $('textarea');
     let textAdded = inputedData.val();
-    addedPlannerInfo.text(textAdded)
-    planner.append(addedPlannerInfo)
-    $(inputedData.val(''))
-    saveButton.on('fas fa-save', savePlannerInfo)
+    // addedPlannerInfo.text(textAdded)
+    // planner.append(addedPlannerInfo)
+    // $(inputedData.val(''))
+    for (let i = 0; i < inputedData.length; i++) {
+      console.log(`this loop has run ${i} times`);
+      console.log("this loop has run " + i + " times" );
+      localStorage.setItem(`hour${i}`, inputedData[i].value);
+    
+    }
 
-    localStorage.setItem(addedPlannerInfo,textAdded);
+   
   }
-
+  saveButton.on('click', savePlannerInfo)
   // write an if statement so the the block highlights in the correct colour
  
 
-  $('.description col-8').focus(function(){
+  $('.description').focus(function(){
     if ( beforeTime < time){
       let beforeTime = $('this').css('background-color', '#d3d3d3')
     } else if (presentTime === time){
@@ -42,7 +62,8 @@ $(document).ready(function () {
     let futureTime = $('this').css('background-color', '#77dd77',)
     }
     }
-)})
+)
+})
 
   // save to localStorage
   
